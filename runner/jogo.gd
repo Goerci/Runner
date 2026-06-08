@@ -21,3 +21,9 @@ func _process(delta: float) -> void:
 		$Chao.position.x = 1152  # coloque ele após a cena na direita
 	if $Chao2.position.x < -1152:
 		$Chao2.position.x = 1152
+	$MeioPreto.position.x -= velocidade*delta*0.10
+	$MeioPreto2.position.x -= velocidade*delta*0.10
+	if $MeioPreto.position.x < -1152: # se o fundo sair de cena pela esquerda
+		$MeioPreto.position.x = 1152  # coloque ele após a cena na direita
+		if $MeioAzul.position.x < -1152:
+			$MeioAzul2.position.x = 1152
